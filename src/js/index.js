@@ -25,7 +25,7 @@ const loadSample = (url) => {
 };
 
 
-loadSample('/wav/M.wav');
+loadSample('/wav/N.wav');
 
 const W = 2000;
 const H = 1000;
@@ -63,13 +63,13 @@ emitter.on('sampleLoadSucceeded', (buffer) => {
     vv = last*v < 0 ? 100: 0;
     let vvv = vv > 1 ? 10000 : 0;
 
-    // c.fillRect(i, 0, 1, vv * H);
+    c.fillRect(i, 0, 1, vv * H);
+    c.fillRect((v * 34132324224232342) % W + (2 * i) % 37, 0, 2, vvv * H);
+    c.fillRect((v * 34132324224232342) % W + (74 * i * v) % 37, 0, 4, vvv * H);
+    c.fillRect((v * 8 +i * 3232) % W, (((7 * vvv % i) % 37*v*i*123) % 25)+i*3 + (i*v*v*v*23333)%987, 4, (vvv * H)%87);
 
-    c.fillRect((vvv * 13 + 17 * i) % W, (vvv *8765)%(i*12), 1, (vvv * i % 619) % H);
-    c.fillRect((vvv * 103 + 17 * i) % W, (vvv *8765)%(i*12), 1, (vvv * i % 619) % H);
-    c.fillRect((vvv * 139 + 17+313) % W, (vvv *8765)%(i*12), 1, (vvv * i % 619) % H);
-    c.fillRect((vvv * 38*i+329847) % W, (vvv *8765)%(i*12), 1, (vvv * i % 619) % H);
-    c.fillRect(((130 + vv * i) % 134 * i * i )%W, (vvv * 13 + 1007 * i) % W, (vvv * i % 319) % H, 1);
+    // c.fillRect((367 + vv)%20 + i, (i % 47) +i * 0.7 * v + 2, 5, 40);
+    c.fillRect((367 + vv)%20 + i, Math.pow(i % 47, 2) +i * 0.7 * v + 2, 5, 40);
 
     last = v;
   });
