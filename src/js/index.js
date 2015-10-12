@@ -25,7 +25,7 @@ const loadSample = (url) => {
 };
 
 
-loadSample('/wav/I.wav');
+loadSample('/wav/J.wav');
 
 const W = 2000;
 const H = 1000;
@@ -64,6 +64,9 @@ emitter.on('sampleLoadSucceeded', (buffer) => {
     let vvv = vv > 10 ? 100 : 0;
     c.fillRect(i, (i*v << 2 *W% 10)%W, 1, (vvv * i * 319)%H);
     c.fillRect((vvv*13)*W, 0, 1, (vvv * i * 319)%H);
+    c.fillRect((i*v << 10 *W% 10)%W, i, 1, (vvv * i * 237)%H);
+    c.fillRect((i*v << 10 *W% 10)%W, i, (vvv * i * 237)%H, 2);
+    c.fillRect((vvv*177)*W, 0, 1, (vvv * i * 319)%H);
     last = v;
   });
 
