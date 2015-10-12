@@ -25,7 +25,7 @@ const loadSample = (url) => {
 };
 
 
-loadSample('/wav/H.wav');
+loadSample('/wav/I.wav');
 
 const W = 2000;
 const H = 1000;
